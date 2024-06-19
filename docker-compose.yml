@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   db:
     image: mysql:5.7
@@ -10,6 +11,7 @@ services:
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
       MYSQL_PASSWORD: ${DB_PASS}
+
   wordpress:
     depends_on:
       - db
@@ -24,3 +26,7 @@ services:
       WORDPRESS_DB_NAME: ${DB_NAME}
     volumes:
       - wordpress_data:/var/www/html
+
+volumes:
+  db_data: {}
+  wordpress_data: {}
