@@ -9,7 +9,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASS}
       MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
+      # MYSQL_USER: ${DB_USER}
+      MYSQL_USER: ${DB_ROOT}
       MYSQL_PASSWORD: ${DB_PASS}
 
   wordpress:
