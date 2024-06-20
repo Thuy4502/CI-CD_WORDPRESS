@@ -41,10 +41,10 @@ services:
       - db_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASS}
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: myshop
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
 
   wordpress:
     depends_on:
