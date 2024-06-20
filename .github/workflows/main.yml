@@ -86,7 +86,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [wordpress_build, jekyll_build]
+    needs: jekyll_build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
