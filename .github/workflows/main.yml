@@ -17,9 +17,9 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: 123456
-          MYSQL_DATABASE: myshop
-          MYSQL_USER: root
-          MYSQL_PASSWORD: 
+          MYSQL_DATABASE: wordpress
+          MYSQL_USER: user
+          MYSQL_PASSWORD: 123456
         ports:
           - 3306:3306
         options: >-
