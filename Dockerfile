@@ -1,5 +1,3 @@
-
-Sử dụng image chính thức của WordPress
 FROM wordpress:latest
 
 # Sao chép toàn bộ nội dung của dự án WordPress vào thư mục gốc của WordPress trong container
