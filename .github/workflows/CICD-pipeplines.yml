@@ -41,14 +41,9 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push Docker image
+      - name: Build and build Docker image
         run: |
           docker buildx create --use --name mybuilder
           docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/docker-wordpress:latest . --push
-
-       - name: Deploy to Docker Desktop
-        run: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/docker-wordpress:latest
-          docker run -d --name wordpress -p 8000:80 --env-file .env ${{ secrets.DOCKER_USERNAME }}/docker-wordpress:latest
 
   
