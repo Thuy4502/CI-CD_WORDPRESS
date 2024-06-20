@@ -1,4 +1,4 @@
-name: CI for WordPress
+name: CI/CD for WordPress
 
 on:
   push:
